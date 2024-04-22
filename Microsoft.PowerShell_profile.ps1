@@ -3,6 +3,7 @@
 ##############################
 
 # Import Modules
+Import-Module -Name Save-LatestScreenshot
 
 
 ##############################
@@ -34,8 +35,7 @@ function mv { Move-Item }
 # Initializations
 ##############################
 
-# sourcing scripts
-. "$PWSH_PROFILE_PATH\scripts\save_latest_screenshot.ps1"
+# sourcing scripts (not recommended)
 
 # welsome message
 Get-Content "$PWSH_PROFILE_PATH\msg\msg_shell_welcome"
