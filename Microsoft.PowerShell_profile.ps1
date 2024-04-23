@@ -5,6 +5,7 @@
 # Import Modules
 Import-Module -Name Save-LatestScreenshot
 Import-Module -Name Recycle
+Import-Module -Name Posh-Git
 
 
 ##############################
