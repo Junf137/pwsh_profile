@@ -13,15 +13,13 @@ Import-Module -Name Posh-Git
 ##############################
 
 # variables
-$PWSH_PROFILE_PATH = "$env:USERPROFILE\Documents\PowerShell"
-$VIM = "D:\ProgramFiles\Vim"
-$VIMRUNTIME = "$VIM\vim90"
 
 # alias
-Set-Alias vim_t "$VIMRUNTIME\vim.exe"
-Set-Alias vim   "$VIMRUNTIME\gvim.exe"
+Set-Alias cl    "clear"
 
-Set-Alias cl   	"clear"
+Set-Alias trash     "Remove-ItemSafely"
+Set-Alias trestore  "Restore-RecycledItem"
+Set-Alias tlist     "Get-RecycledItem"
 
 # convert these aliases to functions
 function .. { Set-Location .. }
@@ -40,7 +38,7 @@ function mv { Move-Item }
 # sourcing scripts (not recommended)
 
 # welsome message
-Get-Content "$PWSH_PROFILE_PATH\msg\msg_shell_welcome"
+Get-Content "$env:USERPROFILE\Documents\PowerShell\msg\msg_shell_welcome"
 
 ##############################
 # Function
@@ -64,32 +62,31 @@ function gco {
 
 # $PATH\VBoxManage.exe startvm "ubuntu2204" --type=headless
 function startvm {
-    Set-Location "D:\ProgramFiles\Oracle\VirtualBox"
 
     if ( $args.count -eq 1 ) {
-        .\VBoxManage.exe startvm $args[0] --type=headless
+        & "$env:VBOX_MSI_INSTALL_PATH\VBoxManage.exe" startvm $args[0] --type=headless
     }
     else {
         Write-Output "[Log]: Invalid argument number"
     }
 }
 
-# activate sakuraCat proxy policy
-function actProxy {
+# Activate sakuraCat proxy policy
+function Start-SakuraProxy {
     $env:http_proxy = "http://127.0.0.1:33210"
     $env:https_proxy = "http://127.0.0.1:33210"
     $env:all_proxy = "socks5://127.0.0.1:33211"
 }
 
-# deactivate sakuraCat proxy policy
-function deactProxy {
+# Deactivate sakuraCat proxy policy
+function Stop-CurrentProxy {
     $env:http_proxy = ""
     $env:https_proxy = ""
     $env:all_proxy = ""
 }
 
-# show current proxy policy
-function showProxy {
+# Show current proxy policy
+function Show-CurrentProxy {
     Write-Output "http_proxy: $env:http_proxy"
     Write-Output "https_proxy: $env:https_proxy"
     Write-Output "all_proxy: $env:all_proxy"

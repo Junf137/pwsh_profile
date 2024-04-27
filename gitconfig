@@ -1,0 +1,18 @@
+[user]
+	name = Junfeng Lei
+    email = 3086638517@qq.com
+
+[core]
+    editor = vim
+	excludesfile = ~/.gitignore_global
+
+[alias]
+
+[credential]
+	helper = cache
+
+[init]
+	defaultBranch = master
+
+[color]
+	ui = auto
