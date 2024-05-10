@@ -6,6 +6,9 @@
 Import-Module -Name Save-LatestScreenshot
 Import-Module -Name Recycle
 Import-Module -Name Posh-Git
+Import-Module -Name PSFzf
+Import-Module -Name ColoredText
+Import-Module -Name Tree
 
 
 ##############################
@@ -13,6 +16,9 @@ Import-Module -Name Posh-Git
 ##############################
 
 # variables
+# FZF
+$ENV:FZF_DEFAULT_OPTS = "--height=60% --layout=reverse --info=inline --border --margin=1 --padding=1"
+$ENV:FZF_CTRL_T_OPTS = "--walker-skip .git"
 
 # alias
 Set-Alias cl    "clear"
