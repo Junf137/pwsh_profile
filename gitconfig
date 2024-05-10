@@ -5,11 +5,15 @@
 [core]
     editor = vim
 	excludesfile = ~/.gitignore_global
+	autocrlf = true
 
 [alias]
 
 [credential]
 	helper = cache
+
+[credential "helperselector"]
+	selected = manager
 
 [init]
 	defaultBranch = master

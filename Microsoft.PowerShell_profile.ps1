@@ -44,7 +44,7 @@ function mv { Move-Item }
 # sourcing scripts (not recommended)
 
 # welsome message
-Get-Content "$env:USERPROFILE\Documents\PowerShell\msg\msg_shell_welcome"
+Get-Content ([System.Environment]::GetFolderPath('MyDocuments') + "\PowerShell\msg\msg_shell_welcome")
 
 ##############################
 # Function
