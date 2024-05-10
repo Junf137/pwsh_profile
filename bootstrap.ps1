@@ -8,14 +8,18 @@ $sourceFiles = @(
     "git\gitconfig",
     "vim\vimrc",
     "vim\gvimrc",
-    "conda\condarc"
+    "conda\condarc",
+    "wezterm\wezterm-config",
+    "starship\starship-default"
 )
 
 $targetFiles = @(
     ".gitconfig",
     "_vimrc",
     "_gvimrc",
-    ".condarc"
+    ".condarc",
+    ".config\wezterm\",
+    ".config\starship\"
 )
 
 # Function to create symbolic links

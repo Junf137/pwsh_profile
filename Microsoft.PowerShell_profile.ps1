@@ -112,3 +112,8 @@ function condaa {
 
 # deactivate current conda environment
 function condad { conda deactivate }
+
+# region starship init
+$ENV:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
+Invoke-Expression (&starship init powershell)
+# endregion
