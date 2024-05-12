@@ -4,6 +4,7 @@
 
 # Import Modules
 Import-Module -Name Save-LatestScreenshot
+Import-Module -Name ProcessToDesktop
 Import-Module -Name Recycle
 Import-Module -Name Posh-Git
 Import-Module -Name PSFzf
@@ -76,15 +77,29 @@ function gco {
     }
 }
 
-# $PATH\VBoxManage.exe startvm "ubuntu2204" --type=headless
-function startvm {
+function New-VmInHeadless {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$VmName
+    )
 
-    if ( $args.count -eq 1 ) {
-        & "$env:VBOX_MSI_INSTALL_PATH\VBoxManage.exe" startvm $args[0] --type=headless
-    }
-    else {
-        Write-Output "[Log]: Invalid argument number"
-    }
+    # start the vm
+    & "$env:VBOX_MSI_INSTALL_PATH\VBoxManage.exe" startvm $VmName --type headless
+}
+
+function New-VmToNewDesktop {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$VmName
+    )
+
+    # start the vm
+    & "$env:VBOX_MSI_INSTALL_PATH\VBoxManage.exe" startvm $VmName
+
+    # create a new desktop
+    New-Desktop
+
+    Move-ProcessToDesktop -ProcessName "VirtualBoxVM" -DesktopIndex -1
 }
 
 # Activate sakuraCat proxy policy
