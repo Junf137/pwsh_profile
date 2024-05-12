@@ -11,3 +11,6 @@
 # ignore folder under starship/ but not starship/starship-default
 /starship/*
 !/starship/starship-default/
+
+# ignore folder under vscode/
+.vscode/

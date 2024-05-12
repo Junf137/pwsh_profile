@@ -10,6 +10,14 @@ Import-Module -Name PSFzf
 Import-Module -Name ColoredText
 Import-Module -Name Tree
 
+# Using Modules
+$ENV:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
+Invoke-Expression (&starship init powershell)
+
+# Set Key Bindings
+# Clear the text from the start of the current logical line to the cursor. The cleared text is placed in the kill-ring.
+Set-PSReadLineKeyHandler -Chord Ctrl+u -Function BackwardKillLine
+
 
 ##############################
 # Veriables & Alias
@@ -35,7 +43,9 @@ function rm { Remove-Item }
 function rmdir { Remove-Item -Recurse }
 function cp { Copy-Item }
 function mv { Move-Item }
-
+function cdc { Set-Location C:\ }
+function cdd { Set-Location D:\ }
+function explorer { Start-Process explorer.exe -ArgumentList "/e, $args" }
 
 ##############################
 # Initializations
@@ -112,8 +122,3 @@ function condaa {
 
 # deactivate current conda environment
 function condad { conda deactivate }
-
-# region starship init
-$ENV:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
-Invoke-Expression (&starship init powershell)
-# endregion
