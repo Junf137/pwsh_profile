@@ -87,6 +87,15 @@ function New-VmInHeadless {
     & "$env:VBOX_MSI_INSTALL_PATH\VBoxManage.exe" startvm $VmName --type headless
 }
 
+function Show-Vms {
+    Write-Output "---* All VMs:"
+    & "$env:VBOX_MSI_INSTALL_PATH\VBoxManage.exe" list vms
+
+    Write-Output ""
+    Write-Output "---* Running VMs:"
+    & "$env:VBOX_MSI_INSTALL_PATH\VBoxManage.exe" list runningvms
+}
+
 function New-VmToNewDesktop {
     param (
         [Parameter(Mandatory = $true)]
