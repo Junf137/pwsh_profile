@@ -2,3 +2,5 @@ auto_activate_base: false
 show_channel_urls: true
 report_errors: false
 changeps1: false
+channels:
+  - defaults
