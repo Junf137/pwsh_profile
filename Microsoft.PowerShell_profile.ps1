@@ -144,3 +144,11 @@ function condaa {
 
 # deactivate current conda environment
 function condad { conda deactivate }
+
+
+# region conda initialize
+# !! Contents within this block are managed by 'conda init' !!
+If (Test-Path "D:\Scoop\apps\miniconda3\current\Scripts\conda.exe") {
+    (& "D:\Scoop\apps\miniconda3\current\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | Where-Object { $_ } | Invoke-Expression
+}
+#endregion
