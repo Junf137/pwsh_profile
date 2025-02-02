@@ -27,6 +27,9 @@ Set-PSReadLineKeyHandler -Chord Ctrl+u -Function BackwardKillLine
 $ENV:FZF_DEFAULT_OPTS = "--height=60% --layout=reverse --info=inline --border --margin=1 --padding=1"
 $ENV:FZF_CTRL_T_OPTS = "--walker-skip .git"
 
+# set OLLAMA_MODELS
+$ENV:OLLAMA_MODELS = "D:\Users\Junf\Project\ollama\models"
+
 # alias
 Set-Alias cl    "clear"
 
