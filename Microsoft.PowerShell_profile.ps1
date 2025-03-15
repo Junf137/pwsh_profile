@@ -21,7 +21,7 @@ Set-PSReadLineKeyHandler -Chord Ctrl+u -Function BackwardKillLine
 
 
 ##############################
-# Veriables & Alias
+# Variables & Alias
 ##############################
 
 # variables
@@ -54,7 +54,7 @@ function explorer { Start-Process explorer.exe -ArgumentList "/e, $args" }
 
 # sourcing scripts (not recommended)
 
-# welsome message
+# welcome message
 Get-Content ([System.Environment]::GetFolderPath('MyDocuments') + "\PowerShell\msg\msg_shell_welcome")
 
 ##############################
@@ -138,7 +138,7 @@ function condaa {
         conda activate $args[0]
     }
     else {
-        Write-Output "[Warning]: invalide input, try activating base"
+        Write-Output "[Warning]: invalid input, try activating base"
         conda activate base
     }
 }
