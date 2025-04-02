@@ -12,5 +12,8 @@
 /starship/*
 !/starship/starship-default/
 
+# ignore vimfiles/plugged/ to avoid embedding repository in the repo
+vimfiles/plugged/
+
 # ignore folder under vscode/
 .vscode/
