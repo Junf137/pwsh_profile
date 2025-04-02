@@ -6,8 +6,8 @@
 # Define source and target file mappings
 $sourceFiles = @(
     "git\gitconfig",
-    "vim\vimrc",
-    "vim\gvimrc",
+    "vimfiles",
+    "vimfiles",
     "conda\condarc",
     "wezterm\wezterm-config",
     "starship\starship-default"
@@ -15,8 +15,8 @@ $sourceFiles = @(
 
 $targetFiles = @(
     ".gitconfig",
-    "_vimrc",
-    "_gvimrc",
+    ".vim",
+    "vimfiles",
     ".condarc",
     ".config\wezterm\",
     ".config\starship\"
