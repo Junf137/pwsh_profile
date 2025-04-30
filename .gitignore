@@ -4,10 +4,6 @@
 # ignore temporary file created by vim
 *.swp
 
-# ignore folder under wezterm/ but not wezterm/wezterm-default
-/wezterm/*
-!/wezterm/wezterm-default/
-
 # ignore folder under starship/ but not starship/starship-default
 /starship/*
 !/starship/starship-default/
