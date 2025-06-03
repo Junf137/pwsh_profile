@@ -10,6 +10,7 @@ Import-Module -Name Posh-Git
 Import-Module -Name PSFzf
 Import-Module -Name ColoredText
 Import-Module -Name Tree
+Import-Module -Name Show-RandomWelcomeMessage
 
 # Using Modules
 $ENV:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
@@ -55,7 +56,7 @@ function explorer { Start-Process explorer.exe -ArgumentList "/e, $args" }
 # sourcing scripts (not recommended)
 
 # welcome message
-Get-Content ([System.Environment]::GetFolderPath('MyDocuments') + "\PowerShell\msg\msg_shell_welcome")
+Show-RandomWelcomeMessage
 
 ##############################
 # Function
