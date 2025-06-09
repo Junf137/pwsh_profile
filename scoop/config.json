@@ -1,0 +1,11 @@
+{
+  "root_path": "D:\\Scoop",
+  "last_update": "2025-06-09T13:29:55.3937255-04:00",
+  "scoop_repo": "https://github.com/ScoopInstaller/Scoop",
+  "scoop_branch": "master",
+  "aria2-warning-enabled": false,
+  "aria2-enabled": true,
+  "aria2-max-connection-per-server": "16",
+  "aria2-split": "16",
+  "aria2-min-split-size": "1M"
+}

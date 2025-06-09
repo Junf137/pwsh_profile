@@ -10,7 +10,8 @@ $sourceFiles = @(
     "vimfiles",
     "conda\condarc",
     "wezterm\wezterm-config",
-    "starship\starship-default"
+    "starship\starship-default",
+    "scoop"
 )
 
 $targetFiles = @(
@@ -19,7 +20,8 @@ $targetFiles = @(
     "vimfiles",
     ".condarc",
     ".config\wezterm\",
-    ".config\starship\"
+    ".config\starship\",
+    ".config\scoop\"
 )
 
 # Function to create symbolic links
