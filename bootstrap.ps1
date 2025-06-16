@@ -14,7 +14,8 @@ $linkMappings = @(
     @{ Source = "conda\condarc"; Target = ".condarc"; BaseDir = "USERPROFILE" },
     @{ Source = "wezterm\wezterm-config"; Target = ".config\wezterm"; BaseDir = "USERPROFILE" },
     @{ Source = "starship\starship-default"; Target = ".config\starship"; BaseDir = "USERPROFILE" },
-    @{ Source = "scoop"; Target = ".config\scoop"; BaseDir = "USERPROFILE" }
+    @{ Source = "scoop"; Target = ".config\scoop"; BaseDir = "USERPROFILE" },
+    @{ Source = "nvim\nvim-kickstart"; Target = "nvim"; BaseDir = "LOCALAPPDATA" }
 )
 
 # Function to create symbolic links
