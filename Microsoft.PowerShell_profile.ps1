@@ -6,6 +6,8 @@
 Import-Module -Name Save-LatestScreenshot
 Import-Module -Name ProcessToDesktop
 Import-Module -Name Show-RandomWelcomeMessage
+Import-Module -Name Posh-Git
+Import-Module -Name PSFzf
 
 # Using Modules
 $ENV:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
