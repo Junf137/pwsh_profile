@@ -5,11 +5,6 @@
 # Import Modules
 Import-Module -Name Save-LatestScreenshot
 Import-Module -Name ProcessToDesktop
-Import-Module -Name Recycle
-Import-Module -Name Posh-Git
-Import-Module -Name PSFzf
-Import-Module -Name ColoredText
-Import-Module -Name Tree
 Import-Module -Name Show-RandomWelcomeMessage
 
 # Using Modules
